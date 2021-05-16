@@ -1,11 +1,15 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Basic Bootstrap Starter`,
-    description: `A simple Gatsby starter leveraging react-bootstrap and little else.`,
-    author: `@mik3y`,
+    title: `curious founder community`,
+    description: `India's most badass community of founders and makers`,
+    author: `@curiousTeam`,
+    copyright:`curiousTeam`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-image`,
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -13,17 +17,22 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `interviews`,
+        path: `${__dirname}/src/interviews`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-basic-bootstrap`,
-        short_name: `starter`,
+        name: `curious founders`,
+        short_name: `curious`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
+        display: `standalone`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
@@ -37,5 +46,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-  pathPrefix: "gatsby-starter-basic-bootstrap",
 };

@@ -1,5 +1,7 @@
 // Main scss.
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 
+$font-family:'DM Sans', sans-serif;
 // Import your own bootstrap customizations as variables first.
 // @import "./_variables.scss"
 
@@ -12,3 +14,4 @@
 // @import "~bootswatch/dist/superhero/bootswatch";
 
 // Add other customizations below.
+

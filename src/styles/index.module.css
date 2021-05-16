@@ -1,0 +1,12 @@
+.search{
+    background-color: white;
+    border-radius: 8px;
+    padding:4px;
+    color:black
+}
+.browse{
+    background-color: white;
+    color:rgb(36, 116, 246);
+    padding: 8px 24px 8px 24px;
+    font-weight: 700;
+}

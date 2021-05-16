@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: white;
+}
+html, body {
+    min-height: 100%;
+}
+body{
+background: rgb(12,9,58);
+background: linear-gradient(0deg, rgba(12,9,58,1) 0%, rgba(45,158,224,1) 100%);
+background-repeat: no-repeat;
+}

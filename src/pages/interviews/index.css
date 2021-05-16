@@ -1,0 +1,52 @@
+
+.special-card {
+    /* create a custom class so you 
+       do not run into specificity issues 
+       against bootstraps styles
+       which tends to work better than using !important 
+       (future you will thank you later)*/
+    
+      background-color: transparent;
+    }
+   @media screen and (min-width:760px){
+    .search{
+        background-color: white;
+        border-radius: 8px;
+        padding:4px;
+        color:black
+    }
+    .inter{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+        text-align: center;
+        width: 100%;
+        grid-gap:20px;
+    }
+    .intercard{
+        width:350px;
+        padding-bottom: 20px;
+    }
+}
+@media screen and (max-width:760px){
+    .search{
+        border-radius: 8px;
+        padding:4px;
+        color:black
+    }
+    .inter{
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-items: center;
+        text-align: center;
+        width: 100%;
+        grid-gap:20px;
+        margin-right: 10px;
+    }
+    .intercard{
+        width:300px;
+        padding-bottom: 20px;
+    }
+}

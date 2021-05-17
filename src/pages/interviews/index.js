@@ -6,6 +6,7 @@ import './index.css';
 import '../../styles/style.css';
 import { graphql, Link } from 'gatsby';
 import { GatsbyImage,getImage } from 'gatsby-plugin-image';
+import Mail from '../../components/mail/Mail';
 
 export default function index({data}) {
     const interviews = data.allMarkdownRemark.nodes;
@@ -17,22 +18,11 @@ export default function index({data}) {
             <h1 className=" display-4  text-center pb-2 font-weight-bold">got sh*t done</h1>
             <p className=" h5 text-center pt-5">Interviews of people who have made real world </p>
             <p className="h5 text-center">products and communities.</p>
-            <Container fluid className="row justify-content-center pb-5">
-                <Row className="pt-5">
-                    <Col sm>
-                        <div className="search">
-                            <div className=" input-group">
-                                <input type="text" placeholder="your email address" className="border-0 pl-5 text-dark"/>
-                                <Button variant="primary" className="ml-2">Join now</Button>
-                            </div>
-                        </div>
-                    </Col>
-                </Row>
-            </Container>
+            <Mail />
             <div className="inter">
             {interviews.map(interview=>(
-                    <div className="intercard">
-                     <GatsbyImage image={getImage(interview.frontmatter.thumbs.childImageSharp.gatsbyImageData)} alt="test" key={interview.id}/>
+                    <div className="intercard" key={interview.id}>
+                     <GatsbyImage image={getImage(interview.frontmatter.thumbs.childImageSharp.gatsbyImageData)} alt="test" />
                      <h3 className=" text-center text-white">{interview.frontmatter.title}</h3>
                      <h3 className=" text-center text-white">#{interview.frontmatter.number}</h3>
                      <p className="text-white">{interview.frontmatter.date}</p>

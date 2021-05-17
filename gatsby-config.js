@@ -11,6 +11,13 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-transformer-remark`,
     {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+          endpoint: 'https://curiousfounders.us1.list-manage.com/subscribe/post?u=80e59984a92e4102f27882fb4&amp;id=b4b30bcb5e', // string; add your MC list endpoint here; see instructions below
+          timeout: 3500, // number; the amount of time, in milliseconds, that you want to allow mailchimp to respond to your request before timing out. defaults to 3500
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,

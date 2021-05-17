@@ -6,7 +6,8 @@ import {search} from '../styles/index.module.css';
 import { graphql, Link } from 'gatsby';
 import { Container,Row,Col,Button } from 'react-bootstrap';
 import { StaticImage } from 'gatsby-plugin-image';
-import {ArrowRight} from "react-bootstrap-icons"
+import {ArrowRight} from "react-bootstrap-icons";
+import Mail from '../components/mail/Mail';
 
 
 export default function interviewDetails({data}) {
@@ -38,18 +39,7 @@ export default function interviewDetails({data}) {
               </Col>
             </Row>
          </Container>
-         <Container fluid className="row justify-content-center pb-5">
-          <Row className="pt-5">
-            <Col sm>
-            <div className={search}>
-              <div className=" input-group">
-                  <input type="text" placeholder="your email address" className="border-0 pl-5 text-dark"/>
-                  <Button variant="primary" className="ml-2">Join now</Button>
-              </div>
-            </div>
-            </Col>
-          </Row>
-        </Container>
+         <Mail />
             <Footer />
         </div>
     )
